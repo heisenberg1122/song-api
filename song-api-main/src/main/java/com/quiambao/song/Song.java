@@ -1,11 +1,13 @@
 package com.quiambao.song;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity // This tells Hibernate to make a table out of this class
+@JsonPropertyOrder({"album", "artist", "genre", "id", "title", "url"})
 public class Song {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
