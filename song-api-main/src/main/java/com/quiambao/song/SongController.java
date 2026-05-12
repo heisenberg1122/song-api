@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping(path="/quiambao/songs")
+@CrossOrigin(origins = {"https://song-ui-pzaw.onrender.com", "http://localhost:5173", "http://localhost:3000"})
 public class SongController {
     @Autowired
     private SongRepository songRepository;
